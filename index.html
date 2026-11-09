@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muh. Naufal Nazwar — Portfolio</title>
+<meta name="description" content="Portfolio of Muh. Naufal Nazwar, Applied Accounting student at Universitas Negeri Makassar with audit experience at KAP ASRI, a finance internship at PT KIMA and three published journal articles.">
+<meta property="og:title" content="Muh. Naufal Nazwar — Portfolio">
+<meta property="og:description" content="Applied Accounting student · Aspiring Auditor · Makassar, Indonesia">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/naufal.png">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C8F31D'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='900' font-size='26' text-anchor='middle' fill='%23111'%3ENN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#C8F31D; --accent-2:#E4FF7A;
+  --bg:#111111; --bg-2:#181818; --card:#1A1A1A; --line:#2A2A2A; --line-2:#3A3A3A;
+  --text:#F2F2F2; --muted:#B5B5B5; --muted-2:#A8A8A8;
+  --display:'Plus Jakarta Sans',system-ui,sans-serif;
+  --body:Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent)}a:hover{color:var(--accent-2)}
+img{max-width:100%}
+h1,h2,h3{font-family:var(--display);margin:0}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+.eyebrow{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.h2{font-weight:800;font-size:clamp(28px,3.4vw,40px);line-height:1.15}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+.site-header.scrolled{border-bottom-color:var(--line)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);background:none;border:0;padding:0;cursor:pointer}
+.logo-mark{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#111;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:18px}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a{padding:10px 16px;border-radius:999px;color:#E6E6E6;text-decoration:none;font-size:14px;transition:background .25s,color .25s}
+.nav a:hover{background:#222}
+.nav a.active{background:var(--accent);color:#111;font-weight:600}
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--text);cursor:pointer;align-items:center;justify-content:center}
+.pill-btn{display:inline-flex;align-items:center;gap:10px;padding:8px 20px 8px 8px;border-radius:999px;background:var(--accent);color:#111;text-decoration:none;font-weight:600;font-size:15px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.pill-btn:hover{color:#111;transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(200,243,29,.6)}
+.pill-btn .dot{width:30px;height:30px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pill-btn .dot svg{transition:transform .3s}
+.pill-btn:hover .dot svg{transform:translateX(3px)}
+.ghost-btn{padding:13px 22px;border-radius:999px;border:1px solid var(--line-2);color:var(--text);text-decoration:none;font-weight:500;font-size:15px;transition:border-color .25s,background .25s}
+.ghost-btn{display:inline-flex;align-items:center;gap:8px}
+.nav-cv{display:none}
+@media (max-width:900px){.nav .nav-cv{display:block;background:var(--accent);color:#111;font-weight:600;text-align:center;margin-top:6px}}
+.dl-cv.dl-go svg{animation:dl .7s ease}
+@keyframes dl{0%{transform:translateY(0)}40%{transform:translateY(5px)}60%{transform:translateY(-3px)}100%{transform:translateY(0)}}
+.ghost-btn:hover{color:var(--text);border-color:var(--accent);background:#1a1a1a}
+
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .nav{position:absolute;left:16px;right:16px;top:76px;flex-direction:column;align-items:stretch;padding:12px;background:#181818;border:1px solid var(--line);border-radius:20px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .25s,transform .25s}
+  .nav.open{opacity:1;transform:none;pointer-events:auto}
+  .nav a{padding:14px 16px}
+  .cv-btn{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding-block:40px 80px}
+.hero-copy{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.hero h1{font-weight:800;font-size:clamp(36px,4.6vw,56px);line-height:1.08;letter-spacing:-.02em}
+.hero-copy .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:460px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.portrait-col{flex:1 1 320px;min-width:0;display:flex;justify-content:center}
+.portrait{position:relative;width:100%;max-width:380px}
+.portrait .arch{position:absolute;inset:60px 0 0 0;border-radius:240px 240px 28px 28px;border:1px solid #333;background:#222;overflow:hidden}
+.portrait img{position:relative;display:block;width:100%;height:auto;aspect-ratio:612/896;object-fit:contain;object-position:bottom;border-radius:0 0 28px 28px}
+.gpa{position:absolute;left:-24px;bottom:32px;display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:999px;background:rgba(28,28,28,.92);border:1px solid var(--line-2);animation:float 4s ease-in-out infinite}
+.gpa b{font-family:var(--display);font-weight:800;font-size:26px;color:var(--accent)}
+.gpa span{font-size:12px;line-height:1.3;color:#D0D0D0}
+@media (max-width:480px){.gpa{left:0}}
+
+.stats{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.stat{display:flex;gap:14px;align-items:center}
+.stat .num{font-family:var(--display);font-weight:800;font-size:26px}
+.stat .lbl{color:var(--muted);font-size:14px}
+
+/* ---------- clickable icons ---------- */
+.icon-btn{position:relative;flex:none;width:52px;height:52px;border-radius:50%;background:#EDEDED;border:0;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#111;transition:background .3s,transform .2s;-webkit-tap-highlight-color:transparent}
+.icon-btn:hover{transform:scale(1.06)}
+.icon-btn svg{transition:transform .2s}
+.icon-btn.is-on{background:var(--accent)}
+.ring{position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);pointer-events:none;animation:ring .7s ease-out forwards}
+.spark{position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px;border-radius:50%;background:var(--accent);pointer-events:none;animation:spark .7s cubic-bezier(.2,.7,.3,1) forwards}
+.anim-pop svg{animation:pop .6s cubic-bezier(.3,1.6,.5,1)}
+.anim-spin svg{animation:spin360 .7s cubic-bezier(.4,1.4,.5,1)}
+.anim-flip svg{animation:flip .7s ease}
+.anim-shake svg{animation:shake .6s ease}
+.anim-swing svg{animation:swing .8s ease}
+.anim-zoom svg{animation:zoom .6s ease}
+
+/* ---------- about ---------- */
+.band{background:var(--bg-2);border-block:1px solid #262626}
+.about{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start;padding-block:80px}
+.about > div:first-child{flex:1 1 320px;min-width:0}
+.about-text{flex:1.3 1 360px;min-width:0;display:flex;flex-direction:column;gap:18px;color:#C4C4C4;font-size:16px;line-height:1.7}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding-top:6px}
+.chip{padding:8px 14px;border-radius:999px;border:1px solid var(--line-2);font-size:13px;color:#E6E6E6;background:transparent;font-family:inherit;cursor:pointer;transition:all .25s}
+.chip:hover,.chip.is-on{border-color:var(--accent);color:#111;background:var(--accent)}
+
+/* ---------- journey ---------- */
+.journey{padding-block:88px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:8px 0 28px}
+.tab{min-height:44px;padding:10px 22px;border-radius:999px;font-family:var(--body);font-size:14px;font-weight:600;cursor:pointer;background:#262626;color:#E6E6E6;border:1px solid var(--line-2);transition:background .25s,color .25s,border-color .25s,transform .2s}
+.tab:hover{transform:translateY(-2px)}
+.tab[aria-selected="true"]{background:var(--accent);color:#111;border-color:var(--accent)}
+.timeline{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:44px 28px;text-align:left}
+.t-item{position:relative;padding-top:30px;border-top:2px dashed #4A4A4A;opacity:0;transform:translateY(16px);animation:rise .55s ease forwards}
+.t-item .node{position:absolute;top:-11px;left:0;width:18px;height:18px;border-radius:50%;background:var(--bg);border:2px solid #8A8A8A}
+.t-item:first-child .node{border-color:var(--accent);box-shadow:0 0 0 0 rgba(200,243,29,.6);animation:pulse 2s infinite}
+.t-item .period{color:var(--muted-2);font-size:14px;font-style:italic;margin-bottom:8px}
+.t-item h3{font-weight:700;font-size:20px;line-height:1.25;margin-bottom:6px}
+.t-item .org{color:var(--accent);font-size:14px;font-weight:500;margin-bottom:12px}
+.t-item .desc{color:#BDBDBD;font-size:14px;line-height:1.6}
+
+/* ---------- publication ---------- */
+.pubs{padding-block:8px 24px;display:flex;flex-direction:column;gap:32px}
+.pubs-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px}
+.pub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.pub-card{position:relative;display:flex;flex-direction:column;gap:14px;padding:28px;border-radius:24px;background:var(--card);border:1px solid var(--line);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .35s}
+.pub-card:hover{transform:translateY(-6px);border-color:#4a4a4a;box-shadow:0 24px 40px -24px rgba(0,0,0,.8)}
+.pub-card.featured{background:var(--accent);color:#111;border-color:var(--accent)}
+.pub-top{display:flex;align-items:center;gap:12px}
+.pub-top .icon-btn{width:46px;height:46px}
+.pub-card.featured .icon-btn{background:#111;color:var(--accent)}
+.pub-tag{padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);font-size:12px;font-weight:600}
+.pub-card.featured .pub-tag{border-color:rgba(17,17,17,.35)}
+.pub-year{margin-left:auto;font-family:var(--display);font-weight:800;font-size:22px}
+.pub-card h3{font-weight:800;font-size:clamp(18px,1.7vw,21px);line-height:1.3;text-wrap:balance}
+.pub-authors{font-size:14px;line-height:1.55;color:#C4C4C4}
+.pub-journal{font-size:14px;line-height:1.55;font-weight:600;color:var(--accent);overflow-wrap:anywhere}
+.pub-card.featured .pub-authors,.pub-card.featured .pub-journal{color:#111}
+.pub-link{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 8px 8px 18px;min-height:44px;border-radius:999px;background:#262626;color:var(--text);text-decoration:none;font-weight:600;font-size:14px;border:1px solid var(--line-2);transition:background .25s,color .25s}
+.pub-link:hover{background:var(--accent);color:#111;border-color:var(--accent)}
+.pub-card.featured .pub-link{background:#111;color:var(--accent);border-color:#111}
+.pub-card.featured .pub-link:hover{background:#000;color:var(--accent-2)}
+.pub-arrow{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);overflow:hidden}
+.pub-arrow svg{transition:transform .3s}
+.pub-link:hover .pub-arrow svg{animation:arrowOut .45s ease}
+@keyframes arrowOut{0%{transform:none}45%{transform:translate(14px,-14px)}46%{transform:translate(-14px,14px)}100%{transform:none}}
+
+/* ---------- skills ---------- */
+.skills{padding-block:88px;display:flex;flex-direction:column;gap:28px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:16px;transition:border-color .3s,transform .3s}
+.card:hover{border-color:#4a4a4a;transform:translateY(-4px)}
+.card-head{display:flex;align-items:center;gap:14px}
+.card-head .icon-btn{width:48px;height:48px}
+.card h3{font-size:20px}
+.card ul{margin:0;padding-left:18px;color:#C4C4C4;line-height:1.85;font-size:15px}
+.card ul.spaced{display:flex;flex-direction:column;gap:10px;line-height:1.6}
+
+/* ---------- contact ---------- */
+.contact{padding-block:80px 40px;display:flex;flex-direction:column;gap:36px}
+.contact-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end}
+.contact h2{font-weight:800;font-size:clamp(30px,4.4vw,52px);line-height:1.05;max-width:640px}
+.contact h2 span{color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}
+.c-card{display:flex;gap:14px;align-items:center;padding:16px 20px;border-radius:18px;border:1px solid #2E2E2E;text-decoration:none;color:var(--text);transition:border-color .3s,background .3s}
+.c-card:hover{color:var(--text);border-color:var(--accent);background:#1c1c1c}
+.c-card .icon-btn{width:46px;height:46px;background:#262626;color:var(--accent)}
+.c-card .icon-btn.is-on{background:var(--accent);color:#111}
+.c-card small{display:block;color:var(--muted-2);font-size:12px}
+.c-card > span:last-child{font-size:14px;min-width:0;overflow-wrap:anywhere}
+@media (min-width:1000px){.contact-grid{grid-template-columns:1.45fr 1fr 1fr 1fr}}
+.foot{padding-top:24px;border-top:1px solid var(--line);color:#8F8F8F;font-size:13px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#1e1e1e;border:1px solid var(--accent);color:var(--text);padding:12px 18px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:100;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+
+/* ================= MOTION GRAPHICS (hero) ================= */
+.hero-stage{position:relative;overflow:hidden;isolation:isolate}
+.motion-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.mg-grid{position:absolute;inset:-40px;background-image:radial-gradient(rgba(255,255,255,.09) 1.2px,transparent 1.4px);background-size:28px 28px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 30%,transparent 75%);animation:gridDrift 18s linear infinite}
+.mg-shape{position:absolute;color:var(--accent);will-change:transform}
+.mg-shape > *{display:block}
+.mg-float{animation:mgFloat 7s ease-in-out infinite}
+.mg-spin{animation:spin 22s linear infinite}
+.mg-spin-r{animation:spin 30s linear infinite reverse}
+.mg-draw path{stroke-dasharray:260;stroke-dashoffset:260;animation:draw 4.5s ease-in-out infinite alternate}
+.mg-blink{animation:blink 2.4s ease-in-out infinite}
+.mg-big{position:absolute;right:-2%;bottom:6%;font-family:var(--display);font-weight:800;font-size:clamp(90px,16vw,230px);line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);white-space:nowrap;user-select:none}
+
+/* headline reveal + rotator */
+.hero h1 .line{display:block}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em;margin-bottom:-.06em}
+.hero h1 .w > i{display:inline-block;font-style:normal;transform:translateY(110%);animation:wordUp .8s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .accent{color:var(--accent)}
+.rotator{display:inline}
+.hero h1 .line.accent{min-height:2.16em;opacity:0;transform:translateY(20px);animation:rise .8s cubic-bezier(.2,.8,.2,1) .6s forwards}
+@media (max-width:1100px){.hero h1 .line.accent{min-height:1.08em}}
+.caret{display:inline-block;width:.08em;height:.9em;margin-left:.06em;background:var(--accent);vertical-align:-.08em;animation:caret 1s steps(1) infinite}
+.hero .eyebrow,.hero .lead,.hero .cta{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+.hero .eyebrow{animation-delay:.05s}.hero .lead{animation-delay:.75s}.hero .cta{animation-delay:.9s}
+.eyebrow .live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:10px;vertical-align:1px;animation:pulse 2s infinite}
+
+/* portrait orbits */
+.portrait{transition:transform .25s ease-out}
+.orbit{position:absolute;left:50%;top:44%;width:122%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;pointer-events:none}
+.orbit.ring{border:1px dashed rgba(255,255,255,.14);animation:spin 40s linear infinite}
+.orbit.ring.two{width:96%;border:1px solid rgba(200,243,29,.16);animation-duration:26s;animation-direction:reverse}
+.orbit.ring::before{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+.orbit.sats{z-index:3;animation:spin 40s linear infinite}
+.sat{position:absolute;translate:-50% -50%;padding:7px 13px;border-radius:999px;background:rgba(24,24,24,.9);border:1px solid var(--line-2);font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;animation:spin 40s linear infinite reverse;display:flex;align-items:center;gap:6px}
+.sat::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.sat.s1{left:50%;top:0}.sat.s2{left:96%;top:70%}.sat.s3{left:4%;top:70%}
+.portrait .arch,.portrait picture,.gpa{z-index:1}
+.portrait picture{position:relative;z-index:2;display:block}
+.gpa{z-index:4}
+
+/* stats stagger */
+.stats.reveal{opacity:1;transform:none}
+.stats .stat{opacity:0;transform:translateX(30px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.stats.in .stat{opacity:1;transform:none}
+.stats.in .stat:nth-child(2){transition-delay:.12s}.stats.in .stat:nth-child(3){transition-delay:.24s}.stats.in .stat:nth-child(4){transition-delay:.36s}
+
+/* marquee */
+.marquee-zone{position:relative;height:150px;margin-top:-30px}
+.marquee{position:absolute;left:-5%;width:110%;overflow:hidden;padding-block:14px;font-family:var(--display);font-weight:800;font-size:clamp(18px,2.2vw,26px);letter-spacing:.02em;text-transform:uppercase}
+.marquee.m1{top:30px;background:var(--accent);color:#111;transform:rotate(-2.5deg);z-index:2}
+.marquee.m2{top:46px;background:#1d1d1d;color:#E6E6E6;border-block:1px solid var(--line-2);transform:rotate(2deg)}
+.marquee .track{display:flex;width:max-content;animation:marquee 26s linear infinite}
+.marquee.m2 .track{animation-direction:reverse;animation-duration:32s}
+.marquee .track span{display:inline-flex;align-items:center;gap:26px;padding-right:26px}
+.marquee.m2 svg{color:var(--accent)}
+.marquee-zone:hover .track{animation-play-state:paused}
+
+@media (max-width:700px){.mg-shape{display:none}.sat.s3{left:10%}.sat.s2{left:90%}.orbit{width:104%}.orbit.ring.two{width:86%}.sat{font-size:11px;padding:6px 10px}.marquee-zone{height:120px;margin-top:-10px}}
+@keyframes gridDrift{to{background-position:28px 28px}}
+@keyframes mgFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(8deg)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes wordUp{to{transform:none}}
+@keyframes caret{50%{opacity:0}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* keyframes */
+@keyframes ring{from{transform:scale(1);opacity:1}to{transform:scale(1.9);opacity:0}}
+@keyframes spark{from{transform:translate(0,0) scale(1);opacity:1}to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+@keyframes pop{0%{transform:scale(1)}35%{transform:scale(.6)}70%{transform:scale(1.35)}100%{transform:scale(1)}}
+@keyframes spin360{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes flip{0%{transform:perspective(200px) rotateY(0)}100%{transform:perspective(200px) rotateY(360deg)}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px) rotate(-8deg)}40%{transform:translateX(4px) rotate(8deg)}60%{transform:translateX(-3px) rotate(-5deg)}80%{transform:translateX(3px) rotate(5deg)}}
+@keyframes swing{0%{transform:rotate(0)}20%{transform:rotate(18deg)}40%{transform:rotate(-14deg)}60%{transform:rotate(8deg)}80%{transform:rotate(-4deg)}100%{transform:rotate(0)}}
+@keyframes zoom{0%{transform:scale(1)}50%{transform:scale(1.5) translateY(-3px)}100%{transform:scale(1)}}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(200,243,29,.55)}70%{box-shadow:0 0 0 12px rgba(200,243,29,0)}100%{box-shadow:0 0 0 0 rgba(200,243,29,0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .hero h1 .w > i,.hero h1 .line.accent,.hero .eyebrow,.hero .lead,.hero .cta,.stats .stat{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap nav-row">
+    <a href="#home" class="logo" aria-label="Muh. Naufal Nazwar, back to top">
+      <span class="logo-mark icon-like" data-anim="spin">NN</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#journey">Experience</a>
+      <a href="#publication">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/CV_Muh_Naufal_Nazwar.pdf" download="CV_Muh_Naufal_Nazwar.pdf" class="nav-cv dl-cv">Download CV ↓</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="pill-btn cv-btn dl-cv" href="assets/CV_Muh_Naufal_Nazwar.pdf" download="CV_Muh_Naufal_Nazwar.pdf" type="application/pdf">
+        <span class="dot"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8F31D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"/><path d="M6 10l6 6 6-6"/><path d="M5 20h14"/></svg></span>
+        Download CV
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<div class="hero-stage" id="heroStage">
+  <div class="motion-bg" aria-hidden="true">
+    <div class="mg-grid"></div>
+    <div class="mg-big" data-depth="6">AUDIT</div>
+    <div class="mg-shape mg-desk" data-depth="18" style="left:6%;top:14%"><svg class="mg-spin" width="70" height="70" viewBox="0 0 70 70" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 7"><circle cx="35" cy="35" r="32"/></svg></div>
+    <div class="mg-shape mg-desk" data-depth="30" style="left:44%;top:9%"><svg class="mg-float" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></div>
+    <div class="mg-shape" data-depth="12" style="left:3%;bottom:16%"><svg class="mg-draw" width="150" height="40" viewBox="0 0 150 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 20c12-16 24-16 36 0s24 16 36 0 24-16 36 0 18 12 36 0"/></svg></div>
+    <div class="mg-shape mg-desk" data-depth="24" style="right:7%;top:12%"><svg class="mg-spin-r" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="5" width="24" height="24" rx="3"/></svg></div>
+    <div class="mg-shape" data-depth="36" style="left:36%;bottom:12%"><svg class="mg-blink" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg></div>
+    <div class="mg-shape" data-depth="20" style="right:24%;bottom:8%"><svg class="mg-float" style="animation-delay:-3s" width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#F2F2F2" stroke-opacity=".35" stroke-width="2"><path d="M4 40L22 6l18 34z"/></svg></div>
+    <div class="mg-shape" data-depth="28" style="left:24%;top:4%"><svg class="mg-blink" style="animation-delay:-1.2s" width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="currentColor"/></svg></div>
+  </div>
+<section id="home" class="wrap hero">
+  <div class="hero-copy reveal">
+    <p class="eyebrow"><span class="live" aria-hidden="true"></span>Welcome to my portfolio</p>
+    <h1 aria-label="Hi, I'm Muh. Naufal Nazwar, Aspiring Auditor"><span class="line split" aria-hidden="true">Hi, I'm Muh. Naufal Nazwar</span><span class="line accent" aria-hidden="true"><span class="rotator" data-words="Aspiring Auditor|Accounting Student|Audit Researcher">Aspiring Auditor</span><span class="caret"></span></span></h1>
+    <p class="lead">Applied Accounting student at Universitas Negeri Makassar with hands-on audit experience at a public accounting firm and three published journal articles in auditing, taxation, and human resource management.</p>
+    <div class="cta">
+      <a class="pill-btn" href="#contact">
+        <span class="dot"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8F31D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+        Contact Me
+      </a>
+      <a class="ghost-btn dl-cv" href="assets/CV_Muh_Naufal_Nazwar.pdf" download="CV_Muh_Naufal_Nazwar.pdf"><svg class="dl-ic" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"/><path d="M6 10l6 6 6-6"/><path d="M5 20h14"/></svg>Download CV</a>
+    </div>
+  </div>
+
+  <div class="portrait-col reveal">
+    <div class="portrait" id="portrait">
+      <div class="orbit ring" aria-hidden="true"></div>
+      <div class="orbit ring two" aria-hidden="true"></div>
+      <div class="arch" aria-hidden="true"></div>
+      <picture>
+        <source srcset="assets/naufal.webp" type="image/webp">
+        <img src="assets/naufal.png" alt="Portrait of Muh. Naufal Nazwar" width="612" height="896">
+      </picture>
+      <div class="orbit sats" aria-hidden="true"><span class="sat s1">Auditing</span><span class="sat s2">Excel &amp; VBA</span><span class="sat s3">Research</span></div>
+      <div class="gpa"><b data-count="3.84" data-dec="2">3.84</b><span>GPA out of 4.00<br>Universitas Negeri Makassar</span></div>
+    </div>
+  </div>
+
+  <div class="stats reveal">
+    <div class="stat">
+      <button class="icon-btn" type="button" data-anim="swing" data-msg="2 academic (1st Place Essay Litfest UB, Finalist Mapres FEB UNM) · 2 karate (3rd National Kata U-21, 2nd Kejurda)" aria-label="Total achievements">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3"/><path d="M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+      </button>
+      <div><div class="num" data-count="4">4</div><div class="lbl">Achievements (Academic &amp; Sports)</div></div>
+    </div>
+    <div class="stat">
+      <button class="icon-btn" type="button" data-anim="flip" data-msg="Auditing (BIJAC 2024) · Taxation (JIAN 2025) · HR Management (Annusfy 2025)" aria-label="Published journal articles">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8"/><path d="M8 16h6"/></svg>
+      </button>
+      <div><div class="num" data-count="3">3</div><div class="lbl">Published Journal Articles</div></div>
+    </div>
+    <div class="stat">
+      <button class="icon-btn" type="button" data-anim="zoom" data-msg="RS Andi Makkasau Parepare & RS Batara Siang Pangkep" aria-label="Hospitals audited">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>
+      </button>
+      <div><div class="num" data-count="2">2</div><div class="lbl">Hospitals Audited (Field Work)</div></div>
+    </div>
+    <div class="stat">
+      <button class="icon-btn" type="button" data-anim="spin" data-msg="Finalist — Mahasiswa Berprestasi, FEB UNM 2025" aria-label="Outstanding student finalist">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-3 5 3-1.5-8.5"/></svg>
+      </button>
+      <div><div class="num">Finalist</div><div class="lbl">Outstanding Student FEB UNM 2025</div></div>
+    </div>
+  </div>
+</section>
+<div class="marquee-zone" aria-hidden="true">
+  <div class="marquee m2"><div class="track"><span>Auditing <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Accounting <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Audit Research <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Taxation <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Finance Internship <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Excel &amp; VBA <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Stock Opname <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Leadership <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Teamwork <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> </span><span>Auditing <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Accounting <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Audit Research <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Taxation <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Finance Internship <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Excel &amp; VBA <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Stock Opname <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Leadership <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Teamwork <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> </span></div></div>
+  <div class="marquee m1"><div class="track"><span>Auditing <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Accounting <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Audit Research <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Taxation <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Finance Internship <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Excel &amp; VBA <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Stock Opname <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Leadership <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Teamwork <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> </span><span>Auditing <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Accounting <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Audit Research <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Taxation <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Finance Internship <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Excel &amp; VBA <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Stock Opname <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Leadership <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> Teamwork <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg> </span></div></div>
+</div>
+</div><!-- /hero-stage -->
+
+<!-- ABOUT -->
+<section id="about" class="band">
+  <div class="wrap about">
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:12px">About me</p>
+      <h2 class="h2">Accounting student focused on auditing and audit quality.</h2>
+    </div>
+    <div class="about-text reveal">
+      <p>I am studying for a Bachelor of Applied Accounting (D4 Akuntansi) at Universitas Negeri Makassar, currently holding a GPA of 3.84/4.00. In 2024 I worked as a Junior Assistant Auditor at KAP ASRI, supporting senior auditors with data collection, preliminary analysis, stock opname and reporting of findings, and in 2026 I joined PT Kawasan Industri Makassar (PT KIMA) as a Finance Intern in its Container Depot unit.</p>
+      <p>I have co-authored three journal articles covering auditing, taxation, and human resource management.</p>
+      <p>Outside the classroom I lead the Research and Development division of MP Ekolibrium FEB UNM and have chaired and coordinated several student committees. Based in Makassar, Indonesia.</p>
+      <div class="chips">
+        <button class="chip" type="button">Accounting</button>
+        <button class="chip" type="button">Auditing</button>
+        <button class="chip" type="button">Research</button>
+        <button class="chip" type="button">Makassar, Indonesia</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="wrap journey">
+  <h2 class="h2 reveal">My Journey</h2>
+  <p class="reveal" style="color:var(--muted);font-size:16px;max-width:560px">Education, work, organizations and committees I have been part of.</p>
+  <div class="tabs reveal" role="tablist" aria-label="Journey categories">
+    <button class="tab" type="button" role="tab" aria-selected="true" data-tab="education">Education</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-tab="work">Work</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-tab="org">Organizations</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-tab="committee">Committees</button>
+  </div>
+  <div class="timeline" id="timeline" role="tabpanel" aria-live="polite"></div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publication" class="wrap pubs">
+  <div class="pubs-head reveal">
+    <div>
+      <p class="eyebrow" style="margin-bottom:12px">Publications</p>
+      <h2 class="h2">Three published journal articles</h2>
+    </div>
+    <p style="color:var(--muted);font-size:15px;max-width:380px;line-height:1.6">Research in auditing, taxation, and human resource management. Open each article from its link.</p>
+  </div>
+  <div class="pub-grid">
+    <article class="pub-card featured reveal">
+      <div class="pub-top">
+        <button class="icon-btn" type="button" data-anim="flip" data-msg="First author · Audit tenure, audit rotation and company size vs. audit quality" aria-label="Article topic: Auditing"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8"/><path d="M8 16h6"/></svg></button>
+        <span class="pub-tag">Auditing</span><span class="pub-year">2024</span>
+      </div>
+      <h3>Pengaruh Audit Tenure, Rotasi Audit, dan Ukuran Perusahaan terhadap Kualitas Audit</h3>
+      <p class="pub-authors"><b>Nazwar, M. N.</b>, Nurhidayana, Ryketeng, M., Ginting, C. D. B., &amp; Rahman, A. N. M.</p>
+      <p class="pub-journal">BIJAC: Bata Ilyas Journal of Accounting, 5(3), 45–56</p>
+      <a class="pub-link" href="https://www.semanticscholar.org/paper/Pengaruh-Audit-Tenure%2C-Rotasi-Audit%2C-dan-Ukuran-Nazwar-Nurhidayana/8fb9e511a0caab8e01303fb7deda53546719ce11" target="_blank" rel="noopener">Read on Semantic Scholar <span class="pub-arrow"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span></a>
+    </article>
+    <article class="pub-card  reveal">
+      <div class="pub-top">
+        <button class="icon-btn" type="button" data-anim="flip" data-msg="First author · Tax planning and tax avoidance vs. firm value" aria-label="Article topic: Taxation"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8"/><path d="M8 16h6"/></svg></button>
+        <span class="pub-tag">Taxation</span><span class="pub-year">2025</span>
+      </div>
+      <h3>Pengaruh Perencanaan dan Penghindaran Pajak terhadap Nilai Perusahaan pada Perusahaan Layanan Digital</h3>
+      <p class="pub-authors"><b>Nazwar, M. N.</b>, Ginting, W. P., Nasution, M. A. H., Panjaitan, T., &amp; Ginting, C. D. B.</p>
+      <p class="pub-journal">Jurnal Ilmiah Akuntansi dan Keuangan (JIAN), 4(1), 1–7 · DOI 10.69679/jian.v4i1.6748</p>
+      <a class="pub-link" href="https://journal.unm.ac.id/index.php/JIAN/article/view/6748" target="_blank" rel="noopener">Read on journal.unm.ac.id <span class="pub-arrow"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span></a>
+    </article>
+    <article class="pub-card  reveal">
+      <div class="pub-top">
+        <button class="icon-btn" type="button" data-anim="flip" data-msg="Co-author · Literature review on job satisfaction and employee performance" aria-label="Article topic: HR Management"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8"/><path d="M8 16h6"/></svg></button>
+        <span class="pub-tag">HR Management</span><span class="pub-year">2025</span>
+      </div>
+      <h3>Analisis Teoretis atas Hubungan antara Kepuasan Kerja dan Kinerja Karyawan: Sebuah Studi Literatur</h3>
+      <p class="pub-authors">Rindianti, D., <b>Nazwar, M. N.</b>, Safirah, E., Jusma, J., &amp; Ginting, C. D. B.</p>
+      <p class="pub-journal">Annusfy: Journal of Multidisciplinary Research, 1(4), 194–200</p>
+      <a class="pub-link" href="https://www.researchgate.net/publication/399031072_Analisis_Teoretis_Atas_Hubungan_Antara_Kepuasan_Kerja_Dan_Kinerja_Karyawan_Sebuah_Studi_Literatur" target="_blank" rel="noopener">Read on ResearchGate <span class="pub-arrow"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span></a>
+    </article>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="wrap skills">
+  <h2 class="h2 reveal">Skills &amp; Achievements</h2>
+  <div class="cards">
+    <div class="card reveal">
+      <div class="card-head">
+        <button class="icon-btn" type="button" data-anim="spin" aria-label="Hard skills">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        </button>
+        <h3>Hard Skills</h3>
+      </div>
+      <ul>
+        <li>Microsoft Excel</li>
+        <li>VBA Excel</li>
+        <li>Audit fieldwork: data collection</li>
+        <li>Audit fieldwork: physical inspection (stock opname)</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <div class="card-head">
+        <button class="icon-btn" type="button" data-anim="pop" aria-label="Soft skills">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5a5 5 0 0 1 5.5 5"/></svg>
+        </button>
+        <h3>Soft Skills</h3>
+      </div>
+      <ul>
+        <li>Time management</li>
+        <li>Teamwork &amp; leadership</li>
+        <li>Discipline &amp; consistency</li>
+        <li>Competitive mindset</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <div class="card-head">
+        <button class="icon-btn" type="button" data-anim="swing" aria-label="Achievements">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6 .9-4.4 4.2 1 6L12 16.8 6.7 19.6l1-6L3.3 9.4l6-.9z"/></svg>
+        </button>
+        <h3>Academic Achievements</h3>
+      </div>
+      <ul class="spaced">
+        <li>1st Place, Essay Competition, Litfest Universitas Brawijaya (Team Leader)</li>
+        <li>Finalist, Outstanding Student (Mahasiswa Berprestasi), FEB UNM (2025)</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <div class="card-head">
+        <button class="icon-btn" type="button" data-anim="zoom" data-msg="Karate · Men's Team Kata" aria-label="Sports achievements">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-3 5 3-1.5-8.5"/></svg>
+        </button>
+        <h3>Sports Achievements (Karate)</h3>
+      </div>
+      <ul class="spaced">
+        <li>3rd Place, Men's Team Kata, Under-21, National Karate Championship, Cibubur (2023)</li>
+        <li>2nd Place, Regional Karate Championship (Kejuaraan Daerah), Jeneponto (2023)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CONTACT -->
+<footer id="contact" class="band">
+  <div class="wrap contact">
+    <div class="contact-top reveal">
+      <h2>Let's work <span>together.</span></h2>
+      <a class="pill-btn" href="mailto:naufalnazwar11@gmail.com">
+        <span class="dot"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8F31D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+        Send an Email
+      </a>
+    </div>
+    <div class="contact-grid reveal">
+      <a class="c-card" href="mailto:naufalnazwar11@gmail.com" data-copy="naufalnazwar11@gmail.com">
+        <span class="icon-btn" data-anim="shake" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span><small>Email</small>naufalnazwar11@gmail.com</span>
+      </a>
+      <a class="c-card" href="https://wa.me/6289510008257" target="_blank" rel="noopener">
+        <span class="icon-btn" data-anim="swing" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+        <span><small>Phone / WhatsApp</small>+62 895-1000-8257</span>
+      </a>
+      <a class="c-card" href="https://instagram.com/naufaaal04_" target="_blank" rel="noopener">
+        <span class="icon-btn" data-anim="spin" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></span>
+        <span><small>Instagram</small>@naufaaal04_</span>
+      </a>
+      <div class="c-card" tabindex="0" role="button" aria-label="Location: Makassar, Indonesia">
+        <span class="icon-btn" data-anim="zoom" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <span><small>Location</small>Makassar, Indonesia</span>
+      </div>
+    </div>
+    <div class="foot">
+      <span>© <span id="year">2026</span> Muh. Naufal Nazwar</span>
+      <a href="#home" style="text-decoration:none">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- icon click animation ---------- */
+  function burst(el){
+    var ring = document.createElement('span'); ring.className = 'ring';
+    el.appendChild(ring); setTimeout(function(){ ring.remove(); }, 720);
+    if (reduce) return;
+    for (var i = 0; i < 10; i++){
+      var s = document.createElement('span'); s.className = 'spark';
+      var a = (Math.PI * 2 / 10) * i + Math.random() * .4, d = 34 + Math.random() * 18;
+      s.style.setProperty('--dx', Math.cos(a) * d + 'px');
+      s.style.setProperty('--dy', Math.sin(a) * d + 'px');
+      if (i % 3 === 0) s.style.background = '#ffffff';
+      el.appendChild(s); (function(n){ setTimeout(function(){ n.remove(); }, 720); })(s);
+    }
+  }
+  function animateIcon(el){
+    var kind = el.getAttribute('data-anim') || 'pop';
+    var cls = 'anim-' + kind;
+    el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls);
+    el.classList.add('is-on');
+    setTimeout(function(){ el.classList.remove(cls); }, 820);
+    setTimeout(function(){ el.classList.remove('is-on'); }, 1400);
+    burst(el);
+  }
+
+  var toast = document.getElementById('toast'), tTimer;
+  function showToast(msg){
+    toast.textContent = msg; toast.classList.add('show');
+    clearTimeout(tTimer); tTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2600);
+  }
+
+  function countUp(el){
+    var target = parseFloat(el.getAttribute('data-count')), dec = +(el.getAttribute('data-dec') || 0);
+    if (reduce || isNaN(target)) { return; }
+    var start = null, dur = 900;
+    function step(t){
+      if (!start) start = t;
+      var p = Math.min((t - start) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * e).toFixed(dec);
+      if (p < 1) requestAnimationFrame(step); else el.textContent = target.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // stat & card icons (real buttons)
+  document.querySelectorAll('button.icon-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      animateIcon(btn);
+      var msg = btn.getAttribute('data-msg'); if (msg) showToast(msg);
+      var num = btn.parentElement.querySelector('[data-count]'); if (num) countUp(num);
+    });
+  });
+  // contact cards: animate their icon, links still open
+  document.querySelectorAll('.c-card').forEach(function(card){
+    var ic = card.querySelector('.icon-btn');
+    function go(){ animateIcon(ic); }
+    card.addEventListener('click', function(e){
+      go();
+      if (!card.getAttribute('href')) showToast('Based in Makassar, South Sulawesi, Indonesia');
+      var copy = card.getAttribute('data-copy');
+      if (copy && navigator.clipboard) {
+        navigator.clipboard.writeText(copy).then(function(){ showToast('Email copied: ' + copy); }, function(){});
+      }
+    });
+    card.addEventListener('keydown', function(e){ if (!card.getAttribute('href') && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); card.click(); } });
+  });
+  // logo
+  var logo = document.querySelector('.logo-mark');
+  document.querySelector('.logo').addEventListener('click', function(){
+    if (reduce) return;
+    logo.animate([{transform:'rotate(0) scale(1)'},{transform:'rotate(200deg) scale(1.15)'},{transform:'rotate(360deg) scale(1)'}],{duration:700,easing:'cubic-bezier(.4,1.4,.5,1)'});
+  });
+  // GPA badge count on load
+  var gpa = document.querySelector('.gpa b'); if (gpa) setTimeout(function(){ countUp(gpa); }, 400);
+  // chips toggle
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.addEventListener('click', function(){
+      c.classList.toggle('is-on');
+      if (!reduce) c.animate([{transform:'scale(1)'},{transform:'scale(.9)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:400});
+    });
+  });
+
+  document.querySelectorAll('.dl-cv').forEach(function(a){
+    a.addEventListener('click', function(){
+      a.classList.remove('dl-go'); void a.offsetWidth; a.classList.add('dl-go');
+      showToast('Downloading CV (PDF)…');
+    });
+  });
+
+
+  /* ---------- motion graphics: headline split, rotator, parallax ---------- */
+  document.querySelectorAll('.hero h1 .split').forEach(function(line){
+    var words = line.textContent.trim().split(/\s+/); line.textContent = '';
+    words.forEach(function(w, i){
+      var o = document.createElement('span'); o.className = 'w';
+      var inner = document.createElement('i'); inner.textContent = w; inner.style.animationDelay = (0.15 + i * 0.08) + 's';
+      o.appendChild(inner); line.appendChild(o);
+      if (i < words.length - 1) line.appendChild(document.createTextNode(' '));
+    });
+  });
+  var rot = document.querySelector('.rotator');
+  if (rot) {
+    if (!reduce) {
+      var words = rot.getAttribute('data-words').split('|'), idx = 0;
+      var typeTo = function(word, done){ var i = 0; (function t(){ rot.textContent = word.slice(0, ++i); if (i < word.length) setTimeout(t, 55); else done && done(); })(); };
+      var erase = function(done){ (function e(){ var cur = rot.textContent; if (cur.length) { rot.textContent = cur.slice(0, -1); setTimeout(e, 30); } else done(); })(); };
+      setInterval(function(){
+        idx = (idx + 1) % words.length;
+        erase(function(){ typeTo(words[idx]); });
+      }, 3600);
+    }
+  }
+  var stage = document.getElementById('heroStage'), portrait = document.getElementById('portrait');
+  var layers = stage ? stage.querySelectorAll('[data-depth]') : [];
+  if (stage && !reduce && window.matchMedia('(pointer:fine)').matches) {
+    var raf = null, mx = 0, my = 0;
+    stage.addEventListener('mousemove', function(e){
+      var r = stage.getBoundingClientRect();
+      mx = (e.clientX - r.left) / r.width - .5; my = (e.clientY - r.top) / r.height - .5;
+      if (!raf) raf = requestAnimationFrame(function(){
+        raf = null;
+        layers.forEach(function(l){ var d = +l.getAttribute('data-depth'); l.style.transform = 'translate(' + (-mx * d) + 'px,' + (-my * d) + 'px)'; });
+        if (portrait) portrait.style.transform = 'perspective(900px) rotateY(' + (mx * 6) + 'deg) rotateX(' + (-my * 5) + 'deg)';
+      });
+    });
+    stage.addEventListener('mouseleave', function(){
+      layers.forEach(function(l){ l.style.transform = ''; }); if (portrait) portrait.style.transform = '';
+    });
+  }
+
+  /* ---------- journey tabs ---------- */
+  var data = {
+    education: [
+      { period: '2023 – Present', title: 'Bachelor of Applied Accounting (D4)', org: 'Universitas Negeri Makassar', desc: 'GPA 3.84/4.00. Interest in accounting and auditing.' },
+      { period: 'Before 2023', title: 'Senior High School', org: 'SMA Negeri 2 Parepare', desc: 'Parepare, Indonesia.' }
+    ],
+    work: [
+      { period: '2026', title: 'Finance Intern', org: 'PT Kawasan Industri Makassar (Persero) / PT KIMA', desc: 'Finance internship in the Container Depot (Depo Peti Kemas) unit, Makassar.' },
+      { period: '2024', title: 'Junior Assistant Auditor', org: 'KAP ASRI (Public Accounting Firm)', desc: 'Assisted senior auditors in data collection, preliminary analysis and reporting of findings; performed stock opname. Entities: RS Andi Makkasau Parepare and RS Batara Siang Pangkep.' }
+    ],
+    org: [
+      { period: '2025 – 2026', title: 'Head of Research & Development (Litbang)', org: 'MP Ekolibrium FEB UNM', desc: 'Member of the PPK Ormawa proposal drafting team.' },
+      { period: '2024 – 2025', title: 'Social Media Coordinator', org: 'Tim Website Akuntansi Terapan UNM', desc: 'Coordinated social media content for the Applied Accounting department website team.' }
+    ],
+    committee: [
+      { period: '2026', title: 'Person in Charge & Volunteer, Logistics', org: 'P2M MP Ekolibrium FEB UNM', desc: 'Penelitian dan Pengabdian (research and community service) program.' },
+      { period: 'Committee', title: 'Person in Charge, Logistics', org: 'Generasi Emas PKM (GEMA PKM)', desc: 'Makassar, Indonesia.' },
+      { period: '2024 – 2025', title: 'Chairman of the Organizing Committee', org: 'Musyawarah Besar MP Ekolibrium FEB UNM', desc: 'Led the organizing committee of the organization’s general assembly.' }
+    ]
+  };
+  var tl = document.getElementById('timeline');
+  function el(tag, cls, text){ var n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; }
+  function render(key){
+    tl.innerHTML = '';
+    data[key].forEach(function(it, i){
+      var a = el('article', 't-item'); a.style.animationDelay = (i * 120) + 'ms';
+      a.appendChild(el('span', 'node'));
+      a.appendChild(el('p', 'period', it.period));
+      a.appendChild(el('h3', '', it.title));
+      a.appendChild(el('p', 'org', it.org));
+      a.appendChild(el('p', 'desc', it.desc));
+      tl.appendChild(a);
+    });
+  }
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+      render(t.getAttribute('data-tab'));
+    });
+  });
+  render('education');
+
+  /* ---------- nav: mobile menu, active link, header border ---------- */
+  var nav = document.getElementById('nav'), menuBtn = document.getElementById('menuBtn');
+  menuBtn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }); });
+
+  var header = document.querySelector('.site-header');
+  window.addEventListener('scroll', function(){ header.classList.toggle('scrolled', window.scrollY > 10); }, { passive: true });
+
+  var links = nav.querySelectorAll('a');
+  if ('IntersectionObserver' in window){
+    var secObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          var id = en.target.id;
+          links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href') === '#' + id); });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['home','about','journey','publication','skills','contact'].forEach(function(id){ var s = document.getElementById(id); if (s) secObs.observe(s); });
+
+    var revObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); revObs.unobserve(en.target); } });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(function(r){ revObs.observe(r); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(r){ r.classList.add('in'); });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
